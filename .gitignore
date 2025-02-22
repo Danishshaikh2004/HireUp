@@ -1,0 +1,16 @@
+# Node.js dependencies
+node_modules/
+
+# Environment files (Do NOT push secrets)
+.env
+client/.env
+server/.env
+
+# Firebase Credentials (DO NOT COMMIT)
+Server/config/firebaseServiceAccountKey.json
+
+# Build & Logs
+*.log
+dist/
+build/
+.DS_Store
