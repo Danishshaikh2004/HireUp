@@ -40,25 +40,26 @@ function NavbarComponent() {
   };
 
   return (
-    <Navbar expand="lg" className="bg-white py-3">
+    <Navbar expand="lg" className="py-3">
       <Container>
         {/* Logo Section */}
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
-          <h4 style={{ color: "#1ac6ff", fontWeight: "bold", margin: 0 }}>Internshala</h4>
-        </Navbar.Brand>
+  <h1 style={{ fontWeight: "bold", margin: 0, fontSize: "2rem" }}>HireUp.</h1>
+</Navbar.Brand>
+
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
         <Navbar.Collapse id="responsive-navbar-nav">
           {/* Navigation Links */}
           <Nav className="me-auto d-flex align-items-center gap-2">
-            <Nav.Link as={Link} to="/jobs" className="fw-semibold text-grey ms-lg-4 fs-5 fs-lg-4">
+            <Nav.Link as={Link} to="/jobs" className="fw-semibold ms-lg-4 fs-5 fs-lg-4">
               Jobs
             </Nav.Link>
-            <Nav.Link as={Link} to="/internships" className="fw-semibold text-grey ms-lg-4 fs-5 fs-lg-4">
+            <Nav.Link as={Link} to="/internships" className="fw-semibold ms-lg-4 fs-5 fs-lg-4">
               Internships
             </Nav.Link>
-            <Nav.Link as={Link} to="/courses" className="fw-semibold text-grey ms-lg-4 fs-5 fs-lg-4">
+            <Nav.Link as={Link} to="/courses" className="fw-semibold ms-lg-4 fs-5 fs-lg-4">
               Courses
             </Nav.Link>
           </Nav>
@@ -124,10 +125,10 @@ function NavbarComponent() {
                 </div>
 
                 {/* Register Buttons */}
-                <Link to="/candidate-signup" className="btn btn-info text-white fw-semibold">
+                <Link to="/candidate-signup" className="btn btn-info fw-semibold">
                   Register as Candidate
                 </Link>
-                <Link to="/employer-signup" className="btn btn-info text-white fw-semibold">
+                <Link to="/employer-signup" className="btn btn-info fw-semibold">
                   Register as Employer
                 </Link>
               </>

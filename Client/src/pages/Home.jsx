@@ -3,86 +3,84 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <Container className="text-center mt-5">
-      {/* Main Heading Section */}
-      <h1 style={{ fontSize: "50px", color: "#1ac6ff" }}>Make your dream career a reality</h1>
+    <Container className="text-center mt-3">
+      {/* 🌟 Hero Section */}
+      <h1 style={{ fontSize: "40px", color: "#1ac6ff", fontWeight: "bold" }}>
+        Unlock Your Potential, Land Your Dream Job!
+      </h1>
       <img src="/src/assets/home.webp" alt="home" className="img-fluid mb-4" />
-      <h1 style={{ color: "#1ac6ff" }}>Find Internships & Jobs Easily</h1>
-      <p>Your career starts here!</p>
+      <h2 style={{ color: "#1ac6ff", fontWeight: "bold" }}>
+        Explore. Apply. Get Hired Instantly.
+      </h2>
+      <p style={{ fontSize: "18px", color: "#555" }}>
+        Your journey to success starts here. Find top internships and jobs effortlessly.
+      </p>
       <Link to="/jobs">
-        <Button style={{ backgroundColor: "#1ac6ff", borderColor: "#1ac6ff", color: "#fff" }}>
+        <Button style={{ backgroundColor: "#1ac6ff", borderColor: "#1ac6ff", fontSize: "18px", padding: "10px 25px" }}>
           Browse Jobs
         </Button>
       </Link>
 
-
-
+      {/* 🏢 Trusted Companies Section */}
       <div className="mt-5" style={{ overflow: "hidden", position: "relative" }}>
-        <h2 className="text-center" style={{ marginBottom: "40px" }}>
-          Top companies trust us
+        <h2 className="text-center" style={{ marginBottom: "30px", fontWeight: "bold" }}>
+          Trusted by Leading Companies
         </h2>
-        <div
-          className="d-flex align-items-center"
-          style={{
-            display: "flex",
-            gap: "30px",
-            whiteSpace: "nowrap",
-            animation: "scroll 15s linear infinite",
-            width: "max-content", 
-            marginTop: "20px", 
-            marginBottom: "30px",
-          }}
-        >
-          <img src="/src/assets/nestle.png" alt="nestle" className="img-fluid" style={{ height: "60px", flexShrink: "0" }} />
-          <img src="/src/assets/nykaa.jpg" alt="nykaa" className="img-fluid" style={{ height: "60px", flexShrink: "0" }} />
-          <img src="/src/assets/paytm.png" alt="paytm" className="img-fluid" style={{ height: "60px", flexShrink: "0" }} />
-          <img src="/src/assets/phonepe.png" alt="phonepe" className="img-fluid" style={{ height: "60px", flexShrink: "0" }} />
-          <img src="/src/assets/puma.png" alt="puma" className="img-fluid" style={{ height: "60px", flexShrink: "0" }} />
-          <img src="/src/assets/jio.png" alt="jio" className="img-fluid" style={{ height: "60px", flexShrink: "0" }} />
-          <img src="/src/assets/urban.png" alt="urban" className="img-fluid" style={{ height: "60px", flexShrink: "0" }} />
-          <img src="/src/assets/airtel.png" alt="airtel" className="img-fluid" style={{ height: "60px", flexShrink: "0" }} />
-          <img src="/src/assets/amazon.webp" alt="amazon" className="img-fluid" style={{ height: "60px", flexShrink: "0" }} />
-          <img src="/src/assets/hcl.jpeg" alt="hcl" className="img-fluid" style={{ height: "60px", flexShrink: "0" }} />
+        <div className="company-slider">
+          <div className="company-logos">
+            {[
+              "nestle.png", "nykaa.png", "paytm.png", "phonepe.png",
+              "puma.png", "jio.png", "urban.png", "airtel.png",
+              "amazon.webp", "hcl.png"
+            ].map((logo, index) => (
+              <img key={index} src={`/src/assets/${logo}`} alt={logo.split(".")[0]} className="company-logo" />
+            ))}
+          </div>
         </div>
-        <style>
-          {`
-      @keyframes scroll {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-100%);
-        }
-      }
-    `}
-        </style>
       </div>
 
-
-
-
-
-      {/* Stats Section */}
+      {/* 📊 Stats Section */}
       <div className="mt-5">
         <Row className="text-center">
-          <Col xs={12} md={3} className="mb-4">
-            <h2 style={{ color: "#1ac6ff" }}>300K+</h2>
-            <p>Companies Hiring</p>
-          </Col>
-          <Col xs={12} md={3} className="mb-4">
-            <h2 style={{ color: "#1ac6ff" }}>10K+</h2>
-            <p>New openings everyday</p>
-          </Col>
-          <Col xs={12} md={3} className="mb-4">
-            <h2 style={{ color: "#1ac6ff" }}>21M+</h2>
-            <p>Active students</p>
-          </Col>
-          <Col xs={12} md={3} className="mb-4">
-            <h2 style={{ color: "#1ac6ff" }}>600K+</h2>
-            <p>Learners</p>
-          </Col>
+          {[
+            { value: "300K+", label: "Companies Hiring" },
+            { value: "10K+", label: "New Openings Every Day" },
+            { value: "21M+", label: "Active Students" },
+            { value: "600K+", label: "Learners Upskilled" }
+          ].map((stat, index) => (
+            <Col key={index} xs={12} md={3} className="mb-4">
+              <h2 style={{ color: "#1ac6ff", fontWeight: "bold" }}>{stat.value}</h2>
+              <p style={{ fontSize: "16px", color: "#555" }}>{stat.label}</p>
+            </Col>
+          ))}
         </Row>
       </div>
+
+      {/* 🎨 CSS for Animations */}
+      <style>
+        {`
+          .company-slider {
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+          }
+          .company-logos {
+            display: flex;
+            gap: 30px;
+            width: max-content;
+            animation: scroll 12s linear infinite;
+          }
+          .company-logo {
+            height: 60px;
+            flex-shrink: 0;
+          }
+          @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+        `}
+      </style>
     </Container>
   );
 };

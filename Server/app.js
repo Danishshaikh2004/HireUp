@@ -8,7 +8,7 @@ app.use(express.json()); // Enable JSON parsing
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb://localhost:27017/Internshala", {
+  .connect("mongodb://localhost:27017/HireUp", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

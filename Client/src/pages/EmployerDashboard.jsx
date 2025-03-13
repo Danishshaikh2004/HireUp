@@ -33,7 +33,7 @@ const EmployerDashboard = () => {
             <Card.Body className="d-flex flex-column">
               <Card.Title>Job Board</Card.Title>
               <Card.Text>Post jobs and manage your listings all in one place.</Card.Text>
-              <Button as={Link} to="/job-board" variant="primary" className="mt-auto">
+              <Button as={Link} to="/job-board" variant="primary" className="btn btn-info fw-semibold">
                 Go to Job Board
               </Button>
             </Card.Body>
@@ -52,7 +52,7 @@ const EmployerDashboard = () => {
             <Card.Body className="d-flex flex-column">
               <Card.Title>View Applications</Card.Title>
               <Card.Text>Review and shortlist applicants efficiently.</Card.Text>
-              <Button as={Link} to="/applications" variant="primary" className="mt-auto">
+              <Button as={Link} to="/applications" variant="primary" className="btn btn-info fw-semibold">
                 View Applications
               </Button>
             </Card.Body>

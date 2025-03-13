@@ -32,8 +32,8 @@ const StudentDashboard = () => {
             />
             <Card.Body className="d-flex flex-column">
               <Card.Title>Job Listings</Card.Title>
-              <Card.Text>Find full-time and part-time job opportunities.</Card.Text>
-              <Button as={Link} to="/jobs" variant="primary" className="mt-auto">
+              <Card.Text>Find the perfect work-life balance with tailored full-time and part-time jobs.</Card.Text>
+              <Button as={Link} to="/jobs" variant="primary" className="btn btn-info fw-semibold">
                 View Jobs
               </Button>
             </Card.Body>
@@ -51,8 +51,8 @@ const StudentDashboard = () => {
             />
             <Card.Body className="d-flex flex-column">
               <Card.Title>Internship Opportunities</Card.Title>
-              <Card.Text>Explore internships to gain hands-on experience.</Card.Text>
-              <Button as={Link} to="/internships" variant="primary" className="mt-auto">
+              <Card.Text>Develop industry skills through hands-on internship opportunities.</Card.Text>
+              <Button as={Link} to="/internships" variant="primary" className="btn btn-info fw-semibold">
                 View Internships
               </Button>
             </Card.Body>
@@ -71,7 +71,7 @@ const StudentDashboard = () => {
             <Card.Body className="d-flex flex-column">
               <Card.Title>Courses & Certifications</Card.Title>
               <Card.Text>Boost your skills with online courses and certifications.</Card.Text>
-              <Button as={Link} to="/courses" variant="primary" className="mt-auto">
+              <Button as={Link} to="/courses" variant="primary" className="btn btn-info fw-semibold">
                 View Courses
               </Button>
             </Card.Body>
