@@ -26,7 +26,7 @@ const StudentDashboard = () => {
           <Card style={{ height: "100%" }} className="d-flex flex-column">
             <Card.Img 
               variant="top" 
-              src="/src/assets/jobs.png" 
+              src="/assets/jobs.png" 
               alt="Jobs" 
               style={{ height: "250px", objectFit: "cover", padding: "10px" }} 
             />
@@ -45,7 +45,7 @@ const StudentDashboard = () => {
           <Card style={{ height: "100%" }} className="d-flex flex-column">
             <Card.Img 
               variant="top" 
-              src="/src/assets/intern.webp" 
+              src="/assets/intern.webp" 
               alt="Internships" 
               style={{ height: "250px", objectFit: "cover", padding: "10px" }} 
             />
@@ -64,7 +64,7 @@ const StudentDashboard = () => {
           <Card style={{ height: "100%" }} className="d-flex flex-column">
             <Card.Img 
               variant="top" 
-              src="/src/assets/courses.webp" 
+              src="/assets/courses.webp" 
               alt="Courses" 
               style={{ height: "250px", objectFit: "cover", padding: "10px" }} 
             />

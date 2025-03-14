@@ -8,7 +8,7 @@ const Home = () => {
       <h1 style={{ fontSize: "40px", color: "#1ac6ff", fontWeight: "bold" }}>
         Unlock Your Potential, Land Your Dream Job!
       </h1>
-      <img src="/src/assets/home.webp" alt="home" className="img-fluid mb-4" />
+      <img src="/assets/home.webp" alt="home" className="img-fluid mb-4" />
       <h2 style={{ color: "#1ac6ff", fontWeight: "bold" }}>
         Explore. Apply. Get Hired Instantly.
       </h2>
@@ -33,7 +33,7 @@ const Home = () => {
               "puma.png", "jio.png", "urban.png", "airtel.png",
               "amazon.webp", "hcl.png"
             ].map((logo, index) => (
-              <img key={index} src={`/src/assets/${logo}`} alt={logo.split(".")[0]} className="company-logo" />
+              <img key={index} src={`/assets/${logo}`} alt={logo.split(".")[0]} className="company-logo" />
             ))}
           </div>
         </div>

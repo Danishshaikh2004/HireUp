@@ -26,7 +26,7 @@ const EmployerDashboard = () => {
           <Card style={{ height: "100%" }} className="d-flex flex-column">
             <Card.Img 
               variant="top" 
-              src="/src/assets/managejobs.png" 
+              src="/assets/managejobs.png" 
               alt="Job Board" 
               style={{ height: "350px", objectFit: "cover", padding: "10px" }} 
             />
@@ -45,7 +45,7 @@ const EmployerDashboard = () => {
           <Card style={{ height: "100%" }} className="d-flex flex-column">
             <Card.Img 
               variant="top" 
-              src="/src/assets/application.png" 
+              src="/assets/application.png" 
               alt="View Applications" 
               style={{ height: "350px", objectFit: "cover", padding: "10px" }} 
             />
