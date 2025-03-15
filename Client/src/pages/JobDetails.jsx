@@ -14,7 +14,7 @@ const JobDetails = () => {
   useEffect(() => {
     const fetchJob = async () => {
       try {
-        const response = await axios.get(`${API_BASE_URL}/courses/${id}`);
+        const response = await axios.get(`${API_BASE_URL}/jobs/${id}`);
         setJob(response.data);
         setLoading(false);
       } catch (error) {
