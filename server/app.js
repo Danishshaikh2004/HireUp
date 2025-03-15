@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -6,14 +8,18 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // Enable JSON parsing
 
+
+
 // Connect to MongoDB
-mongoose
-  .connect("mongodb://localhost:27017/HireUp", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
   .then(() => console.log("✅ MongoDB connected successfully"))
   .catch((err) => console.error("❌ MongoDB connection error:", err));
+
+
+  console.log("MongoDB URI:", process.env.MONGO_URI);
 
 const Course = require("./models/Courses");
 const Internship = require("./models/Internship");
@@ -249,4 +255,6 @@ const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
+
+
 
