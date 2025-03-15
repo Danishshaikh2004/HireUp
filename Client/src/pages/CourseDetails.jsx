@@ -3,6 +3,8 @@ import { Container, Button, Spinner, Alert } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
+const API_BASE_URL = process.env.VITE_API_URL || "http://localhost:5000/api";
+
 const CourseDetails = () => {
   const { id } = useParams(); // Get course ID from URL
   const [course, setCourse] = useState(null);
@@ -12,11 +14,12 @@ const CourseDetails = () => {
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/courses/${id}`);
+        console.log("📡 Fetching course details from:", `${API_BASE_URL}/courses/${id}`);
+        const response = await axios.get(`${API_BASE_URL}/courses/${id}`);
         setCourse(response.data);
         setLoading(false);
       } catch (error) {
-        console.error("Error fetching course:", error);
+        console.error("❌ Error fetching course:", error);
         setError("Failed to load course details.");
         setLoading(false);
       }

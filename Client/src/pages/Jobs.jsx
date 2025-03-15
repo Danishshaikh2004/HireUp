@@ -3,13 +3,15 @@ import axios from "axios";
 import { Container, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+const API_BASE_URL = process.env.VITE_API_URL || "http://localhost:5000/api";
+
 const Jobs = () => {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/jobs"); // Adjust API endpoint if needed
+        const response = await axios.get(`${API_BASE_URL}/jobs`);// Adjust API endpoint if needed
         setJobs(response.data); 
       } catch (error) {
         console.error("Error fetching jobs:", error);

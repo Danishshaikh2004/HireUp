@@ -1,12 +1,15 @@
 import axios from "axios";
 
-// Use environment variable for API base URL
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+// Ensure the API URL is correctly set
+const API_BASE_URL = process.env.VITE_API_URL || "http://localhost:5000/api";
+
+// Debugging: Log API Base URL
+console.log("🔗 API BASE URL:", API_BASE_URL);
 
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: { "Content-Type": "application/json" },
-  timeout: 10000, // Set a timeout (10 seconds)
+  timeout: 10000, // Set timeout (10 seconds)
 });
 
 // Automatically attach token if available
@@ -22,7 +25,7 @@ export const setAuthToken = (token) => {
 api.interceptors.response.use(
   (response) => response,
   (error) => {
-    console.error("API Error:", error.response || error.message);
+    console.error("❌ API Error:", error.response?.data || error.message);
     return Promise.reject(error);
   }
 );

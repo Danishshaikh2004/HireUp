@@ -3,16 +3,21 @@ import { Container, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+const API_BASE_URL = process.env.VITE_API_URL || "http://localhost:5000/api";
+
 const Courses = () => {
   const [courses, setCourses] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/courses");
+        console.log("📡 Fetching courses from:", `${API_BASE_URL}/courses`); // Debugging log
+        const response = await axios.get(`${API_BASE_URL}/courses`);
         setCourses(response.data);
       } catch (error) {
-        console.error("Error fetching courses:", error);
+        console.error("❌ Error fetching courses:", error);
+        setError("Failed to load courses.");
       }
     };
 
@@ -22,6 +27,7 @@ const Courses = () => {
   return (
     <Container className="mt-4">
       <h2>Available Courses</h2>
+      {error && <p style={{ color: "red" }}>{error}</p>}
       {courses.length === 0 ? (
         <p>No courses available.</p>
       ) : (

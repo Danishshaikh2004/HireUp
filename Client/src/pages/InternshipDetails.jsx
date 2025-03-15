@@ -3,6 +3,8 @@ import { Container, Button, Spinner, Alert } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
+const API_BASE_URL = process.env.VITE_API_URL || "http://localhost:5000/api";
+
 const InternshipDetails = () => {
   const { id } = useParams(); // Get internship ID from URL
   const [internship, setInternship] = useState(null);
@@ -12,7 +14,7 @@ const InternshipDetails = () => {
   useEffect(() => {
     const fetchInternship = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/internships/${id}`);
+        const response = await axios.get(`${API_BASE_URL}/internships/${id}`);
         setInternship(response.data);
         setLoading(false);
       } catch (error) {

@@ -3,6 +3,8 @@ import { Container, Button, Spinner, Alert } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
+const API_BASE_URL = process.env.VITE_API_URL || "http://localhost:5000/api";
+
 const JobDetails = () => {
   const { id } = useParams(); // Get job ID from URL
   const [job, setJob] = useState(null);
@@ -12,7 +14,7 @@ const JobDetails = () => {
   useEffect(() => {
     const fetchJob = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/jobs/${id}`);
+        const response = await axios.get(`${API_BASE_URL}/courses/${id}`);
         setJob(response.data);
         setLoading(false);
       } catch (error) {

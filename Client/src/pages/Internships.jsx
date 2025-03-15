@@ -3,13 +3,16 @@ import { Container, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+const API_BASE_URL = process.env.VITE_API_URL || "http://localhost:5000/api";
+
+
 const Internships = () => {
   const [internships, setInternships] = useState([]);
 
   useEffect(() => {
     const fetchInternships = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/internships");
+        const response = await axios.get(`${API_BASE_URL}/internships`);
         setInternships(response.data); // Update state with fetched internships
       } catch (error) {
         console.error("Error fetching internships:", error);
