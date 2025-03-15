@@ -3,7 +3,7 @@ import axios from "axios";
 import { Container, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const API_BASE_URL = process.env.VITE_API_URL || "http://localhost:5000/api";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 const Jobs = () => {
   const [jobs, setJobs] = useState([]);

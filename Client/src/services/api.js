@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// Ensure the API URL is correctly set
-const API_BASE_URL = process.env.VITE_API_URL || "http://localhost:5000/api";
+// ✅ Correct way to get API URL in Vite
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 // Debugging: Log API Base URL
 console.log("🔗 API BASE URL:", API_BASE_URL);
