@@ -1,11 +1,10 @@
 // src/App.jsx
-import AppRouter from "./routes/AppRouter"; // Import AppRouter
-
+import AppRouter from "./routes/AppRouter"; 
 const App = () => {
   return (
     <div>
-      {/* // Updated to use Render backend */}
-      <AppRouter /> {/* Include the router */}
+      
+      <AppRouter /> 
     </div>
   );
 };
