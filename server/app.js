@@ -18,7 +18,6 @@ app.use(express.json()); // Enable JSON parsing
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  dbName: "test", // OR change to "hireup" if your Compass DB is named that
 })
   .then(() => console.log("✅ MongoDB connected successfully"))
   .catch((err) => console.error("❌ MongoDB connection error:", err));
