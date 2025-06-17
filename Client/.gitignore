@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -22,3 +23,21 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+=======
+# Node.js dependencies
+node_modules/
+
+# Environment files (Do NOT push secrets)
+.env
+client/.env
+server/.env
+
+# Firebase Credentials (DO NOT COMMIT)
+Server/config/firebaseServiceAccountKey.json
+
+# Build & Logs
+*.log
+dist/
+build/
+.DS_Store
+>>>>>>> 048f0a23b3dcdd31f21c286c6d43e92fcfb96c28

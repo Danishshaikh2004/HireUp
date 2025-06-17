@@ -1,0 +1,122 @@
+/* 🌟 Global Variables */
+:root {
+  --primary-bg: #F5F3FF; /* Soft Lavender Background */
+  --secondary-bg: #FFFFFF; /* White Navbar & Cards */
+  --primary-text: #333333; /* Dark Gray for Body Text */
+  --heading-text: #4B0082; /* Dark Purple for Headings */
+  --cta-color: #9B5DE5; /* Soft Purple for Buttons */
+  --cta-hover: #7B3EAB; /* Rich Purple on Hover */
+  --accent-color: #FFD700; /* Gold for Premium Jobs */
+}
+
+/* 🌟 Body Styling */
+body {
+  background-color: var(--primary-bg) !important;
+  color: var(--primary-text) !important;
+  font-family: "Inter", sans-serif;
+}
+
+/* 🌟 Navbar Styling */
+.navbar {
+  background-color: transparent !important; /* No background */
+  box-shadow: none !important; /* Remove any shadow */
+}
+
+/* Navbar Text */
+.navbar-brand {
+  color: #4B0082 !important; /* Dark Purple */
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #9B5DE5 !important; /* Dark Purple */
+}
+
+.nav-link:hover {
+  color: #9B5DE5 !important; /* Light Purple Hover */
+}
+
+/* 🌟 Footer Styling (Like Navbar) */
+/* 🌟 Footer Background */
+footer {
+  background-color: #A45EE5 !important; /* Light Purple */
+  padding: 20px 0;
+  text-align: center;
+  color: #4B0082 !important; /* Dark Purple Text */
+}
+
+/* 🌟 Footer Branding */
+.footer-brand {
+  color: #4B0082 !important; /* Dark Purple */
+  font-weight: bold;
+}
+
+/* 🌟 Footer Links */
+.footer-link {
+  color: #FFFFFF !important; /* White Links */
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #4B0082 !important; /* Dark Purple Hover Effect */
+}
+
+/* 🌟 Change Login Button */
+.btn-outline-primary {
+  color: #A45EE5 !important; /* Light Purple Text */
+  border-color: #A45EE5 !important; /* Light Purple Border */
+}
+
+.btn-outline-primary:hover {
+  background-color: #8D46C8 !important; /* Darker Purple */
+  color: white !important;
+  border-color: #8D46C8 !important;
+}
+
+/* 🌟 Change Register Buttons */
+.btn-info {
+  background-color: #A45EE5 !important; /* Light Purple */
+  border-color: #A45EE5 !important;
+  color: white !important;
+}
+
+.btn-info:hover {
+  background-color:  #4B0082 !important; /* Darker Purple */
+  border-color: #4B0082 !important;
+  color:white !important;
+}
+
+
+/* 🌟 Headings */
+h1, h2, h3 {
+  color: var(--heading-text) !important;
+  font-weight: 700;
+}
+
+/* 🌟 Links */
+a {
+  color: var(--cta-color) !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--cta-hover) !important;
+}
+
+/* 🌟 Buttons */
+.btn-primary {
+  background-color: var(--cta-color) !important;
+  border: none;
+  color: white !important;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: var(--cta-hover) !important;
+}
+
+/* 🌟 Premium Job Highlights */
+.premium {
+  color: var(--accent-color);
+  font-weight: bold;
+}

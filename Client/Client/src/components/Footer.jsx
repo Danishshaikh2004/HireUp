@@ -35,7 +35,7 @@ const Footer = () => {
 
           {/* Social Media Links */}
           <Col md={4}>
-            <h5>Follow Us On</h5>
+            <h5>Follow Us</h5>
             <div className="d-flex gap-3 justify-content-center justify-content-md-start">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-black fs-4">
                 <FaLinkedin />
