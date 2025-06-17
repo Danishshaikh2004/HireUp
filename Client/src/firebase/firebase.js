@@ -19,7 +19,7 @@ const db = getFirestore(app);
 // 🔹 Force session-based login (logs out when the tab/browser is closed)
 setPersistence(auth, browserSessionPersistence)
   .then(() => {
-    console.log("Session-based persistence set.");
+    console.log("Session persistence set.");
   })
   .catch((error) => {
     console.error("Error setting persistence:", error);
